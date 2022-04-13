@@ -1,8 +1,3 @@
-folder('CI-Pipelines') {
-    displayName('CI-Pipelines')
-    description('CI-Pipelines')
-}
-
 multibranchPipelineJob('CI-Pipelines/cart') {
     branchSources {
         git {
