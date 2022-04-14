@@ -1,0 +1,21 @@
+- name: Check if job exists
+  ansible.builtin.shell: "{{JENKINS_CLI_PREFIX}} get-job {{item.job}}"
+  ignore_errors: true
+  register: check_job
+
+- name: Generate Unique ID for job creation
+  ansible.builtin.shell: date | md5sum | awk '{print $1}'
+  register: uniq_string
+
+- name: Update Job Template
+  ansible.builtin.template:
+    src: job.xml
+    dest: tmp/job.xml
+
+
+- name: Create a Job
+  when: check_job.rc == 3
+  ansible.builtin.shell: "{{JENKINS_CLI_PREFIX}} create-job {{item.job}}"
+
+#  - name: Update a Job
+#    when: check_job.rc == 0
