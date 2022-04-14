@@ -10,7 +10,7 @@
 - name: Update Job Template
   ansible.builtin.template:
     src: job.xml
-    dest: tmp/job.xml
+    dest: /tmp/job.xml
 
 
 - name: Create a Job
