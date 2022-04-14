@@ -1,3 +1,2 @@
-- name: Demo
-  ansible.builtin.debug:
-    msg: Hello
+- name: Check Jenkins Connection
+  ansible.builtin.shell: "{{JENKINS_CLI_PREFIX}}" who-am-i
