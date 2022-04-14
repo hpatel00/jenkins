@@ -1,0 +1,5 @@
+MB-JOBS:
+  - { name: "cart", repoName: "cart", dirName: "CI-Pipelines/" }
+  - { name: "catalogue", repoName: "catalogue", dirName: "CI-Pipelines/" }
+  - { name: "user", repoName: "user", dirName: "CI-Pipelines/" }
+  - { name: "shipping", repoName: "shipping", dirName: "CI-Pipelines/" }
