@@ -26,7 +26,7 @@
                     <apiUri>https://api.github.com</apiUri>
                     <credentialsId>GitHub</credentialsId>
                     <repoOwner>hpatel00</repoOwner>
-                    <repository>cart</repository>
+                    <repository>{{item.repoName}}</repository>
                     <repositoryUrl>https://github.com/hpatel00/{{item.repoName}}.git</repositoryUrl>
                     <traits>
                         <org.jenkinsci.plugins.github__branch__source.BranchDiscoveryTrait>

@@ -12,7 +12,6 @@
     src: job.xml
     dest: /tmp/job.xml
 
-
 - name: Create a Job
   when: check_job.rc == 3
   ansible.builtin.shell: "cat /tmp/job.xml | {{JENKINS_CLI_PREFIX}} create-job {{item.name}}"
