@@ -8,7 +8,7 @@
 
 - name: Create Jenkins Multibranch Pipeline Job
   ansible.builtin.include_tasks: mb-job.yml
-  loop: "{{MB-JOBS}}"
+  loop: "{{MB_JOBS}}"
 
 
 
